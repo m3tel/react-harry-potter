@@ -1,12 +1,11 @@
 import s from "./Cards.module.css";
-import hero from './hero.png'
 
-export function Cards({name,actor,gender,house,alive,wand}) {
+export function Cards({name,actor,gender,house,alive,wand, image}) {
   return (
     <div className={s.heroCard}>
       <img
         className="heroPhoto"
-        src={ hero}
+        src={image}
         alt=""
         height="192"
         width="332"

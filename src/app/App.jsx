@@ -1,31 +1,17 @@
+import React from "react";
 import "./App.css";
-import { Header } from "../components/Header/Header";
-import { Main } from "../components/Main/Main";
-import { data } from "../components/Cards/hp";
-import { useState } from "react";
+import { Routes, Route } from "react-router-dom"; 
+import { Home } from "../pages/Home/Home";
+import { Liked } from "../pages/Liked/Liked";
+
 
 export function App() {
-  const [hero, setHero] = useState(data);
-  const [house, setHouse] = useState('');
-                     
-  function searchHero(event) {
-    const hero = data
-      .filter((el) =>
-        el.name.toLowerCase().includes(event.target.value.trim().toLowerCase()))
-  
-    setHero(hero);   
-  }
-
   return (
     <>
-      <Header />
-      <Main
-        hero={hero}
-        house={house}
-        searchHero={searchHero}
-        setHouse={setHouse} />
+      <Routes>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/liked" element={<Liked></Liked>}></Route>
+      </Routes>
     </>
   );
 }
-
-

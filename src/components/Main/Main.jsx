@@ -1,13 +1,11 @@
 import { Cards } from "../Cards/Cards";
 import { Container } from "../Container/Container";
 import { Input } from "../Input/Input";
-import { Liked } from "../Pages/Liked/Liked";
+import { Liked } from "../../pages/Liked/Liked";
 import { Select } from "../Select/Select";
 import s from "./Main.module.css";
 
-
-export function Main({ searchHero,hero,setHouse,house }) {
-
+export function Main({ searchHero, hero, setHouse, house }) {
   return (
     <>
       <Container>
@@ -20,7 +18,7 @@ export function Main({ searchHero,hero,setHouse,house }) {
             <Cards key={i} {...el} />
           ))}
         </main>
-        <Liked/>
+        <Liked />
       </Container>
     </>
   );
